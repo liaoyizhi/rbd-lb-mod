@@ -84,6 +84,7 @@ _M.temp_http_server =
         proxy_set_header Host $host:$server_port;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_redirect off;
 
         proxy_pass http://$upstream;
@@ -119,6 +120,7 @@ _M.temp_tls_server =
         proxy_set_header Host $host:$server_port;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_redirect off;
 
         proxy_pass http://$upstream;
