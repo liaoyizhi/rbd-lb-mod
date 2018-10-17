@@ -4,6 +4,6 @@
 ~~~
 systemctl stop rbd-lb
 docker rmi -f goodrain.me/rbd-lb:3.7
-docker build -t goodrain.me/rbd-lb:3.7
+docker build -t goodrain.me/rbd-lb:3.7 .
 systemctl start rbd-lb
 ~~~
